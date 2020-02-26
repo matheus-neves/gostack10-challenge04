@@ -1,0 +1,25 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4A90E2; 
+  height: 64px;
+  padding: 0 21px;
+} 
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile span {
+  margin-right: 8px;
+  font: bold 15px/18px Helvetica;
+  color: #fff;
+}
+
+@media(min-width: 425px) {
+  .main-header {
+    padding: 0 42px;
+  }
+}

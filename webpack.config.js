@@ -12,7 +12,6 @@ module.exports = {
   },
   module: {
     rules: [
-
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -20,20 +19,33 @@ module.exports = {
           loader: 'babel-loader'
         }
       },
-
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader']
       },
-
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: {
           loader: 'file-loader',
         }
-      }
-  
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        use: [
+          "babel-loader",
+          {
+            loader: 'react-svg-loader', 
+            query: {
+              svgo: {
+                pretty: true,
+                plugins: [{ removeStyleElement: true }] 
+              }
+            }
+          }
+        ]
+      },
     ]
   }
-  
+
 }
