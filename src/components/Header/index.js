@@ -1,6 +1,6 @@
 import React from 'react';
-import ImgLogo from '../../assets/logo.svg';
-import ImgProfile from '../../assets/profile.svg';
+import ImgLogo from './header/logo.svg';
+import ImgProfile from './header/profile.svg';
 
 import './styles.css';
 
@@ -10,11 +10,12 @@ function Header() {
     
     <header className="main-header">
 
-      <ImgLogo className="logo" />
+      {/* <ImgLogo className="logo" /> */}
+      <img src={ImgLogo} alt=""/>
 
       <a href="#" className="profile">
         <span>Meu perfil </span>
-        <ImgProfile />
+        {/* <ImgProfile /> */}
       </a>
 
     </header>

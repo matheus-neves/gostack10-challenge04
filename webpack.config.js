@@ -10,6 +10,7 @@ module.exports = {
     contentBase: resolve(__dirname, 'public'),
     port: 3000
   },
+
   module: {
     rules: [
       {
@@ -20,30 +21,20 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: {
-          loader: 'file-loader',
-        }
-      },
-      {
-        test: /\.svg$/,
-        exclude: /node_modules/,
+        test: /\.css$/,
         use: [
-          "babel-loader",
-          {
-            loader: 'react-svg-loader', 
-            query: {
-              svgo: {
-                pretty: true,
-                plugins: [{ removeStyleElement: true }] 
-              }
-            }
-          }
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
         ]
+      },
+      {
+        test: [/\.bmp$/, /\.svg$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: 'url-loader',
+        options: {
+          limit: 200,
+          name: '[name].[hash:8].[ext]',
+          publicPath: 'public/assets'
+        },
       },
     ]
   }
