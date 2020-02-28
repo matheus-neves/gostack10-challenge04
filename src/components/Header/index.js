@@ -1,6 +1,6 @@
 import React from 'react';
-import ImgLogo from './header/logo.svg';
-import ImgProfile from './header/profile.svg';
+import ImgLogo from '../../assets/header/logo.svg';
+import ImgProfile from '../../assets/header/profile.svg';
 
 import './styles.css';
 

@@ -12,7 +12,7 @@ class PostList extends Component {
         id: 1,
         author: {
           name: "Julio Alcantara",
-          avatar: 'posts/author-julio-alcantara.png'
+          avatar: './posts/author-julio-alcantara.png'
         },
         date: "04 Jun 2019",
         content: "Pessoal, alguém sabe se a Rocketseat está contratando?",

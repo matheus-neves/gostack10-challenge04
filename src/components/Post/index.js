@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const path = './posts/author-julio-alcantara.png';
-
 class Post extends Component {
 
   render() {
@@ -11,11 +9,9 @@ class Post extends Component {
       <article>
         <header>
 
-          {/* <img src={require(`${path}`)} alt='Imagem de perfil' /> */}
-          <img src={process.env.PUBLIC_URL + path} alt='Imagem de perfil' />
-          {/* <img src={require(author.avatar)} alt='Imagem de perfil' />} */}
+          {/* <img src='./posts/author-julio-alcantara.png' alt='Imagem de perfil' /> */}
+          <img src={author.avatar} alt='Imagem de perfil' />
           {/* <img src={require(`${author.avatar}`)} alt='Imagem de perfil' /> */}
-          {/* <img src={require('../../assets/posts/author-julio-alcantara.png')} alt='Imagem de perfil' /> */}
           <div>
             <h2>{author.name}</h2>
             <span>{author.date}</span>

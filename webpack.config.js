@@ -7,7 +7,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: resolve(__dirname, 'public'),
+    contentBase: [resolve(__dirname, 'public'), resolve(__dirname, 'src', 'assets')],
     port: 3000
   },
 
@@ -32,8 +32,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 200,
-          name: '[name].[hash:8].[ext]',
-          publicPath: 'public/assets'
+          name: '[name].[hash:8].[ext]'
         },
       },
     ]
