@@ -47,7 +47,7 @@ module.exports = {
           limit: 200,
           name: '[name].[hash:8].[ext]',
           outputPath: 'assets',
-          publicPath: 'src/assets',
+          publicPath: 'assets',
           esModule: false
         },
       },

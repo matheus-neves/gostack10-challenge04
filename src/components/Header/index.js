@@ -7,19 +7,14 @@ import './styles.css';
 function Header() {
 
   return (
-    
+  
     <header className="main-header">
-
-      {/* <ImgLogo className="logo" /> */}
-      <img src={ImgLogo} alt=""/>
-
+      <img src={ImgLogo} alt="Facebook logo"/>
       <a href="#" className="profile">
-        <span>Meu perfil </span>
-        {/* <ImgProfile /> */}
+        <span>Meu perfil</span>
+        <img src={ImgProfile} alt="Profile logo"/>
       </a>
-
     </header>
-
   )
 }
 
